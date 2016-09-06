@@ -161,7 +161,7 @@ class nova::migration::libvirt(
 
       file_line { "/etc/default/${::nova::compute::libvirt::libvirt_service_name} libvirtd opts":
         path  => "/etc/default/${::nova::compute::libvirt::libvirt_service_name}",
-        line  => 'libvirtd_opts="-d -l"',
+        line  => 'libvirtd_opts="-l"',
         match => 'libvirtd_opts=',
         tag   => 'libvirt-file_line',
       }
